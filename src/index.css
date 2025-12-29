@@ -1,0 +1,120 @@
+/* Importar fuente Inter desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Forzamos fondo blanco a toda la pantalla y evitamos scroll horizontal */
+html,
+body {
+  background: #ffffff !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Box-sizing global para evitar que paddings hagan que los bloques se salgan */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh; /* Asegura que la app llena la pantalla */
+}
+
+/* ----------------------------
+   Variables y estilo base
+----------------------------- */
+:root {
+  --brand: #0F2C59;
+  --brand-r: 112;
+  --brand-g: 27;
+  --brand-b: 50;
+
+  --bg: #ffffff;
+  --panel: #f9f9f9;
+  --panel-2: #f3f3f3;
+
+  --text-main: #111827;
+  --border-soft: rgba(148, 163, 184, 0.25);
+
+  --shadow-soft: 0 22px 45px rgba(15, 23, 42, 0.12);
+  --hover-soft: 0 0 0 1px rgba(148, 163, 184, 0.3);
+
+  --hover-neon: 0 0 10px rgba(var(--brand-r), var(--brand-g), var(--brand-b), 0.2);
+  --focus-neon: 0 0 0 2px rgba(var(--brand-r), var(--brand-g), var(--brand-b), 0.5);
+}
+
+/* Tipografía y renderizado base */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111827;
+  background-color: #ffffff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----------------------------
+   Layout principal de la página
+----------------------------- */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 16px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: white;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4px;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.logo.left {
+  height: 65px;
+}
+
+.logo.right {
+  height: 40px;
+}
+
+.app-root {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ----------------------------
+   Footer logo
+----------------------------- */
+.footer-logo img {
+  width: 120px;
+  height: auto;
+  opacity: 0.85;
+}
+
+/* ----------------------------
+   Overrides de la tabla
+----------------------------- */
+
+/* Ocultamos el texto "Vista en tabla / tarjetas / tablero por tipo" */
+.mon-header-strip-title {
+  display: none;
+}
+
+/* Ocultamos el contador Dir / Reg / Ambas */
+.mon-header-strip-kpi {
+  display: none;
+}
